@@ -9,7 +9,7 @@ tags: [python]
 
 ### Chapter 4
 
-메서드: 객체와 연관되어 있고, 점 표기법으로 호출되는 함수.  
+메서드 (method): 객체와 연관되어 있고, 점 표기법으로 호출되는 함수.  
 캡슐화 (encapsulation): 코드 조각을 함수로 감싼 것.  
 일반화 (generalization): 함수를 보다 범용적 (general)하게 만드는 것.  
 인터페이스 (interface): 함수를 어떻게 사용해야 하는지 요약하는 것.  
