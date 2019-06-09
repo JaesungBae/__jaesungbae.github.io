@@ -8,3 +8,6 @@ tags: [python]
 
 
 ### Chapter 4
+
+캡슐화 (encapsulation)
+일반화 (generalization)
