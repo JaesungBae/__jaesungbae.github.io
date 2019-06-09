@@ -1,10 +1,10 @@
 ---
 layout: post
 title: Python Basic
-sutitle: 
+sutitle: [씽크 파이썬] 책을 바탕으로한 python basic 공부...
 tags: [python]
 ---
 
-상당 부분은 [씽크 파이썬] 책 내용을 참고하였음을 밝힙니다.
 
-#
+
+# Chapter 4
