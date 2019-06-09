@@ -9,5 +9,9 @@ tags: [python]
 
 ### Chapter 4
 
-캡슐화 (encapsulation)
-일반화 (generalization)
+캡슐화 (encapsulation): 코드 조각을 함수로 감싼 것.
+
+일반화 (generalization): 함수를 보다 범용적 (general)하게 만드는 것.
+
+인터페이스 (interface): 함수를 어떻게 사용해야 하는지 요약하는 것. 
+* 인자는 무엇인가? 함수는 무엇을 하나? 그리고 반환값은 무엇인가?
