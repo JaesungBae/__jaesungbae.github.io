@@ -39,3 +39,8 @@ $header-desc-link-color: #02453D !default;
 // by user: jaesungbae
 $grey-color:       #828282 !default;
 $grey-color-light: lighten($grey-color, 40%) !default;
+
+@mixin relative-font-size($ratio) {
+  font-size: $font-size * $ratio;
+}
+
