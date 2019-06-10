@@ -35,3 +35,7 @@ $feature-image-size: cover !default; // options include "cover", "contain", "aut
 $header-desc-background-color: #FFD119 !default; //#1ABC9C !default;
 $header-desc-text-color: #FFF !default;
 $header-desc-link-color: #02453D !default;
+
+// by user: jaesungbae
+$grey-color:       #828282 !default;
+$grey-color-light: lighten($grey-color, 40%) !default;
