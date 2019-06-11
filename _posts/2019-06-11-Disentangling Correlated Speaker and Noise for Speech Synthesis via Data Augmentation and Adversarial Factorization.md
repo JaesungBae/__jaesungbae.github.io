@@ -17,4 +17,4 @@ crowed source data를 사용하고자 할때 나타나는 문제점.
 2. Speaker들이 보통 녹음할 때 비슷한 환경에서 녹음하기 때문에 speaker와 noise 사이에는 correlatino이 생길 수 밖에 없음.
 
 Speech synthesis: VCTK dataset.  
-background noise: CHiME-4 challenge dataset.
+Noise-Speaker correlated dataset: CHiME-4 challenge dataset.
