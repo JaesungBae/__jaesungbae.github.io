@@ -3,7 +3,7 @@ layout: post
 title: Ubuntu Error 모음
 tags: [memo]
 ---
-
+---
 ##### librosa.load error
 ```
 raise NoBackendError() 
