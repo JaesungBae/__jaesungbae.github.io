@@ -21,8 +21,8 @@ crowed source data를 사용하고자 할때 나타나는 문제점.
 ![0613](https://user-images.githubusercontent.com/27397032/59400982-267fbe80-8dd4-11e9-82c6-8c793d2c4717.PNG)
 
 ### Experiment
-Baseline model: Multi Speaker Tacotron2, with phoneme
+Baseline model: Multi Speaker Tacotron2, with phoneme  
 Speech synthesis: VCTK dataset.  
-Noise-Speaker correlated dataset: CHiME-4 challenge dataset.
+Noise-Speaker correlated dataset: CHiME-4 challenge dataset.  
 
 ### Comment
