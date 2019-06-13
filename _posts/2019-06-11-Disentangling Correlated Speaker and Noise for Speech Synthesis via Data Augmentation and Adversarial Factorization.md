@@ -19,6 +19,10 @@ crowed source data를 사용하고자 할때 나타나는 문제점.
 
 ### Method
 ![0613](https://user-images.githubusercontent.com/27397032/59400982-267fbe80-8dd4-11e9-82c6-8c793d2c4717.PNG)
+key point: 
+  - Speaker Embedding에 audio condition에 대한 정보는 최대한 포함되지 않게 하며, residual embedding에 audio condition 정보가 포함되도록 학습한다. 
+  - 그러나 augmented classification은 speaker embedding vector에 대해서함.
+  - =>계속해서 augmented를 구분하지 못하도록 loss를 주면, speaker embedding에는 audio condition(augmented)에 대한 정보가 사라지게 되고, 이는 자연스럽게 residual embedding vector에 흘러들어가게 된다.
 
 ### Experiment
 Baseline model: Multi Speaker Tacotron2, with phoneme  
