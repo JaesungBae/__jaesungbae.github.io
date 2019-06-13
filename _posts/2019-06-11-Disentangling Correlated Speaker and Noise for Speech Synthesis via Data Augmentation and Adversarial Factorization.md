@@ -16,8 +16,10 @@ crowed source data를 사용할때에 보통 speaker와 background noise가 corr
 crowed source data를 사용하고자 할때 나타나는 문제점.
 1. background noise는 labeling 하기 힘듦. (e.g. type, level of background noise and reverberation, etc.) Labeling 된다고 하더라고, speaker labeling과 비슷하게 one-hot으로 될 수 밖에 없음.
 2. Speaker들이 보통 녹음할 때 비슷한 환경에서 녹음하기 때문에 speaker와 noise 사이에는 correlatino이 생길 수 밖에 없음.
+![0613](https://user-images.githubusercontent.com/27397032/59400982-267fbe80-8dd4-11e9-82c6-8c793d2c4717.PNG)
 
 ### Exp
 Baseline model: Multi Speaker Tacotron2, with phoneme
 Speech synthesis: VCTK dataset.  
 Noise-Speaker correlated dataset: CHiME-4 challenge dataset.
+
