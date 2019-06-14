@@ -18,4 +18,4 @@ Reference 기반 -> GST 기반 -> Variational approach
 
 ### Measuring reference embedding capacity
 #### Learning a reference embedding space
-Heuristic (non-variational) end-to-end approaches: Reference Encoder, 혹은 GST 모델 등등이 모두 여기에 속한다. 이들은 teacher-forced reconstruction loss로 시작해서 학습된 뒤에, deterministic reference encdoer $g_c(X)$,에 의해 augmented 되곤 한다.
+Heuristic (non-variational) end-to-end approaches: Reference Encoder, 혹은 GST 모델 등등이 모두 여기에 속한다. 이들은 teacher-forced reconstruction loss로 시작해서 학습된 뒤에, deterministic reference encdoer $$g_c(X)$$,에 의해 augmented 되곤 한다.
