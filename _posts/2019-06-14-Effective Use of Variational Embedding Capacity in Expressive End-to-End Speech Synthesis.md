@@ -15,3 +15,4 @@ Speaker, channel chracteristics 외에 **prosody (intonation, stress and rhythm)
 Prosody는 lexical representation 너머에 존재하는 linguistic, semantic, and emotional meaning을 전달하는 요소이다.  
 
 Reference 기반 -> GST 기반 -> Variational approach
+
