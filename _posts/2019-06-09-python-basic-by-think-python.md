@@ -26,7 +26,11 @@ tags: [python]
 ### Chapter 8
 문자열은 불변!
 ```
-fruit = 'banana'
-fruit[0] = 'a'
+>>> fruit = 'banana'
+>>> fruit[0] = 'a'
 TypeError: 'str' object does not support item assignment
+```
+문자열은 메서드 가짐. 메서드 호출 (call)은 인보케이션(invocation, 호출) 이라고도 불림.
+```
+fruit.upper()
 ```
