@@ -35,3 +35,7 @@ TypeError: 'str' object does not support item assignment
 >>> fruit.upper()
 'BANANA'
 ```
+객체: cal1이 객체.
+```
+cal1 = Calculator()
+```
