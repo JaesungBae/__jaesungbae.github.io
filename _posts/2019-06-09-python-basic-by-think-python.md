@@ -32,5 +32,6 @@ TypeError: 'str' object does not support item assignment
 ```
 문자열은 메서드 가짐. 메서드 호출 (call)은 인보케이션(invocation, 호출) 이라고도 불림.
 ```
-fruit.upper()
+>>> fruit.upper()
+'BANANA'
 ```
