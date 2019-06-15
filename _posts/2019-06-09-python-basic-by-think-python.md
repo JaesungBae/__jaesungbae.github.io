@@ -23,7 +23,10 @@ tags: [python]
 2. 프로그램이 동작하면 관련된 코드를 찾아내서 함수로 **캡슐화** 함.  
 3. 함수에 적절한 인자를 추가하면서 **일반화** 함.  
 
+### Chapter 8
+문자열은 불변!
 ```python
-def function():
-  return None
+fruit = 'banana'
+fruit[0] = 'a'
+TypeError: 'str' object does not support item assignment
 ```
