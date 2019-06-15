@@ -25,7 +25,7 @@ tags: [python]
 
 ### Chapter 8
 문자열은 불변!
-```python
+```
 fruit = 'banana'
 fruit[0] = 'a'
 TypeError: 'str' object does not support item assignment
