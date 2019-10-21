@@ -19,7 +19,7 @@
     A personalized text-to-speech (TTS) system requires several hours of high-quality personal speech data from a speaker. In real scenarios, collecting hours of voice recordings of a specific speaker is very expensive, and only a few minutes of data are often available. Recently, it has become easier to obtain speech data from personal social broadcasting. However, it remains difficult to utilize them as training data for TTS systems, as they include various noise such as background music. A global style token (GST) based TTS model can generate high quality speech from speech data mixed with music and noise, but it requires a sufficient amount of data to attain reliable performance. Therefore, in this paper, we propose a method to train the GST-based TTS system with an insufficient amount of specific speaker data containing different music noise. We apply two tasks: first, we separate music from noisy speech data by using a pre-trained music filter; second, we use an auxiliary classifier to make the audio quality clean. We demonstrate that the proposed method can synthesize high-quality speech with less mispronunciation through speech recognition and listening tests.
 
   <p><b>Proposed System Architecture:</b></div><br>
-    <img src="images/2020_ICASSP_fig_v5.png" alt="My Image" width="600" height="138">
+    <img src="images/2020_ICASSP_fig_v5.png" alt="My Image" width="1200" height="276">
 
     &nbsp;
 
@@ -89,27 +89,8 @@
       <a name="src.found">
         <h3>Found Data Application</h3>
       </a>
-      <video id="myVideo" src="images/kma_jtbc_news_20190814_demo.mp4" controls width="640" height="360"></video>
-      <table>
-        <tbody>
-          <tr>
-            <td align="center">NEU</td>
-            <td align="center">JOY</td>
-            <td align="center">ANG</td>
-            <td align="center">SAD</td>
-          </tr>
-          <tr>
-            <td><audio controls="">
-                <source src="demo/record-src-emo/46-FY_NOR_NCF_00093.wav" type="audio/wav"></audio></td>
-            <td><audio controls="">
-                <source src="demo/record-src-emo/58-FY_JOY_NCF_00035.wav" type="audio/wav"></audio></td>
-            <td><audio controls="">
-                <source src="demo/record-src-emo/28-FY_ANG_NCF_00010.wav" type="audio/wav"></audio></td>
-            <td><audio controls="">
-                <source src="demo/record-src-emo/7-FY_SAD_NCF_00093.wav" type="audio/wav"></audio></td>
-          </tr>
-        </tbody>
-      </table>
+      <video id="myVideo" src="images/kma_jtbc_news_20190814_demo.mp4" controls width="640" height="360"></video> <br>
+      BLABLA
     </div>
 
 
@@ -121,14 +102,21 @@
       <div>
         BLABLA
       </div>
-      <div><br />
+      <div><br>
         <b>1. TTS:</b> the DC-TTS [2] model usedconducted in the pre-liminary experiments.
-      <br />
+      <br>
         <b>2.  GST:</b>  the GST-TTS model where the quality embeddingfrom the GST layers was concatenated into the encoderstate of DC-TTS.
-      <br />
+      <br>
         <b>3.  GST+MF:</b>   the  GST-TTS  model  trained  with  filteredspeech obtained from the pre-trained music filter.
-      <br />
+      <br>
         <b>4.  GST+MF+Aux.:</b>  the GST+MF model with an auxiliaryclassifier.
+      </div>
+      <div><br>
+        Sample1: 눈은 내일 새벽까지 이어지다가 점차 그치겠고요.<br>
+        Sample2: 도심형 생활주택 구매 어떤가요?<br>
+        Sample3: 또 동해안을 중심으로는 건조 주의보가 발효 중입니다.<br>
+
+
       </div>
 
       <br><a name="gst-tts.first">
