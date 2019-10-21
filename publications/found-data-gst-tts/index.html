@@ -16,10 +16,10 @@
   <div><b>Authors:</b> Hanbin Bae, Jae-Sung Bae, Young-Ik Kim, Hoon-Young Cho</div>
 
   <p><b>Abstract:</b></div>
-    A personalized text-to-speech (TTS) system requires severalhours of high-quality personal speech data from a speaker. Inreal scenarios, collecting hours of voice recordings of a spe-cific  speaker  is  very  expensive,  and  only  a  few  minutes  ofdata are often available. Recently, has become easier to ob-tain speech data from personal social broadcasting. However,it  remains  difficult  to  utilize  them  as  training  data  for  TTSsystems,  as  they  include  various  noise  such  as  backgroundmusic. A global style token (GST) based TTS model can gen-erate high quality speech from speech data mixed with musicand noise, but it requires a sufficient amount of data to attainreliable performance. Therefore, in this paper, we propose amethod to train the GST-based TTS system with an insuffi-cient amount of specific speaker data containing different mu-sic noise. We apply two tasks: first, we separate music fromnoisy  speech  data  by  using  a  pre-trained  music  filter;  sec-ond, we use an auxiliary classifier to make the audio qualityclean. We demonstrate that the proposed method can synthe-size high-quality speech with less mispronunciation throughspeech recognition and listening tests.
+    A personalized text-to-speech (TTS) system requires several hours of high-quality personal speech data from a speaker. In real scenarios, collecting hours of voice recordings of a specific speaker is very expensive, and only a few minutes of data are often available. Recently, it has become easier to obtain speech data from personal social broadcasting. However, it remains difficult to utilize them as training data for TTS systems, as they include various noise such as background music. A global style token (GST) based TTS model can generate high quality speech from speech data mixed with music and noise, but it requires a sufficient amount of data to attain reliable performance. Therefore, in this paper, we propose a method to train the GST-based TTS system with an insufficient amount of specific speaker data containing different music noise. We apply two tasks: first, we separate music from noisy speech data by using a pre-trained music filter; second, we use an auxiliary classifier to make the audio quality clean. We demonstrate that the proposed method can synthesize high-quality speech with less mispronunciation through speech recognition and listening tests.
 
   <p><b>Proposed System Architecture:</b></div>
-    <img src="images/2020_ICASSP_fig_v5.png" alt="My Image"> <!-- width="100" height="200"-->
+    <img src="images/2020_ICASSP_fig_v5.png" alt="My Image" width="300" height="70">
 
     &nbsp;
 
@@ -28,16 +28,15 @@
     </p>
     <div id="toc_container">
       <ul>
-        <li><a href="#src">Source Speaker's Expressive Speech</a></li>
+        <li><a href="#src">Pre-trained Music Filter</a></li>
         <ol>
-          <li><a href="#src.rec">Recorded Speech</a></li>
-          <li><a href="#src.synth">Synthesized Speech</a></li>
+          <li><a href="#src.kspon">KSponSpeech Dataset</a></li>
+          <li><a href="#src.found">Found Data Application</a></li>
         </ol>
-        <li><a href="#tgt_emo_trans">Target Speaker's Expressive Speech based on Emotion Transplantation</a></li>
+        <li><a href="#gst-tts">Proposed Systems</a></li>
         <ol>
-          <li><a href="#tgt_emo_trans.rec">Recorded Neutral Speech</a></li>
-          <li><a href="#tgt_emo_trans.wo_emo_loss">Synthesized Expressive Speech (w/o emo_loss)</a></li>
-          <li><a href="#tgt_emo_trans.w_emo_loss">Synthesized Expressive Speech (w/ emo_loss)</a></li>
+          <li><a href="#gst-tts.first">Models with SER higher than 60%</a></li>
+          <li><a href="#gst-tts.second">Models with SER lower than 60%</a></li>
         </ol>
       </ul>
     </div>
@@ -46,7 +45,6 @@
     <div><br />We selected speech samples from the test set, which are not used for expressive TTS model training.
       The synthsized speech samples below are converted from mel-scale spectrogram to speech waveform by using the
       Griffin-Lim algorithm.
-      Please note that the sound quality of the synthesized speech is not a consideration.
     </div>
 
 
@@ -54,7 +52,7 @@
 
     <div>
       <a name="src">
-        <h2>Source Speaker's Expressive Speech</h2>
+        <h2>Pre-trained Musci Filter</h2>
       </a>
       <div>
         We used an internal expressive speech database for the source speaker consists of four emotion classes, namely
@@ -62,8 +60,9 @@
         single professional voice actress.
       </div>
 
-      <a name="src.rec">
-        <h3>Recorded Speech</h3>
+
+      <a name="src.kspon">
+        <h3>KSponSpeech Dataset</h3>
       </a>
       <table>
         <tbody>
@@ -85,45 +84,29 @@
           </tr>
         </tbody>
       </table>
-
-
-      <a name="src.synth">
-        <h3>Synthesized Speech</h3>
-      </a>
-      <table>
-        <tbody>
-          <tr>
-            <td align="center">NEU</td>
-            <td align="center">JOY</td>
-            <td align="center">ANG</td>
-            <td align="center">SAD</td>
-          </tr>
-          <tr>
-            <td><audio controls="">
-                <source src="demo/synthesized-emo-src/src_emo-ref_FY_NOR_NCF_00051.wav" type="audio/wav"></audio></td>
-            <td><audio controls="">
-                <source src="demo/synthesized-emo-src/src_emo-ref_FY_JOY_NCF_00002.wav" type="audio/wav"></audio></td>
-            <td><audio controls="">
-                <source src="demo/synthesized-emo-src/src_emo-ref_FY_ANG_NCF_00006.wav" type="audio/wav"></audio></td>
-            <td><audio controls="">
-                <source src="demo/synthesized-emo-src/src_emo-ref_FY_SAD_NCF_00063.wav" type="audio/wav"></audio></td>
-          </tr>
-        </tbody>
-      </table>
     </div>
 
 
 
     <div><br><br><br>
-      <a name="src">
-        <h2>Target Speaker's Expressive Speech based on Emotion Transplantation</h2>
+      <a name="gst-tts">
+        <h2>Proposed Systems</h2>
       </a>
       <div>
         We adapt the pre-trained TTS model using a part of the neutral speech database; an hour of speech waveforms.
       </div>
+      <div><br />
+        <b>1. TTS:</b> the DC-TTS [2] model usedconducted in the pre-liminary experiments.
+      <br />
+        <b>2.  GST:</b>  the GST-TTS model where the quality embeddingfrom the GST layers was concatenated into the encoderstate of DC-TTS.
+      <br />
+        <b>3.  GST+MF:</b>   the  GST-TTS  model  trained  with  filteredspeech obtained from the pre-trained music filter.
+      <br />
+        <b>4.  GST+MF+Aux.:</b>  the GST+MF model with an auxiliaryclassifier.
+      </div>
 
-      <br><a name="tgt_emo_trans.rec">
-        <h3>Recorded Neutral Speech</h3>
+      <br><a name="gst-tts.first">
+        <h3>Models with SER higher than 60%</h3>
       </a>
       <table>
         <tbody>
@@ -145,8 +128,8 @@
       </table>
 
 
-      <br><a name="tgt_emo_trans.wo_emo_loss">
-        <h3>Synthesized Expressive Speech (w/o emo_loss) - Conventional approach</h3>
+      <br><a name="gst-tts.second">
+        <h3>Models with SER lower than 60%</h3>
       </a>
       <table>
         <tbody>
@@ -185,52 +168,6 @@
               </audio></td>
             <td><audio controls="">
                 <source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-49-ref_FY_SAD_NCF_00093.wav" type="audio/wav">
-              </audio></td>
-          </tr>
-        </tbody>
-      </table>
-
-
-      <br><a name="tgt_emo_trans.w_emo_loss">
-        <h3>Synthesized Expressive Speech (w/ emo_loss) - Proposed approach</h3>
-      </a>
-      <table>
-        <tbody>
-          <tr>
-            <td align="center"></td>
-            <td align="center">NEU</td>
-            <td align="center">JOY</td>
-            <td align="center">ANG</td>
-            <td align="center">SAD</td>
-          </tr>
-          <tr>
-            <td nowrap>sample 1</td>
-            <td><audio controls="">
-                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-6-ref_FY_NOR_NCF_00093.wav" type="audio/wav">
-              </audio></td>
-            <td><audio controls="">
-                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-11-ref_FY_JOY_NCF_00042.wav" type="audio/wav">
-              </audio></td>
-            <td><audio controls="">
-                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-14-ref_FY_ANG_NCF_00010.wav" type="audio/wav">
-              </audio></td>
-            <td><audio controls="">
-                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-33-ref_FY_SAD_NCF_00137.wav" type="audio/wav">
-              </audio></td>
-          </tr>
-          <tr>
-            <td nowrap>sample 2</td>
-            <td><audio controls="">
-                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-44-ref_FY_NOR_NCF_00047.wav" type="audio/wav">
-              </audio></td>
-            <td><audio controls="">
-                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-36-ref_FY_JOY_NCF_00035.wav" type="audio/wav">
-              </audio></td>
-            <td><audio controls="">
-                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-37-ref_FY_ANG_NCF_00005.wav" type="audio/wav">
-              </audio></td>
-            <td><audio controls="">
-                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-51-ref_FY_SAD_NCF_00093.wav" type="audio/wav">
               </audio></td>
           </tr>
         </tbody>
