@@ -1,110 +1,113 @@
 <html>
-  <head>
-    <meta charset="UTF-8">
-    <title>Audio samples from "Effective Emotion Transplantation in an End-to-End Text-to-Speech System"</title>
-  </head>
-  <body>
-    <article>
-      <header>
-        <h1>Audio samples from "Effective Emotion Transplantation in an End-to-End Text-to-Speech System"</h1>
-      </header>
-    </article>
 
-    <div><b>Paper:</b> The paper will be uploaded.</div>
-    <div><b>Authors:</b> Young-Sun Joo, Hanbin Bae, Young-Ik Kim, Hoon-Young Cho, Hong-Goo Kang</div>
+<head>
+  <meta charset="UTF-8">
+  <title>Audio samples from "Utilization of Contaminated Found Data for Speech Synthesis Using a Limited Personal Speech Database"</title>
+</head>
 
-    <p><b>Abstract:</b></div>
-       In this letter, we propose an effective technique to transplant
-      a source speaker’s emotional expression to a new target speaker
-      within the end-to-end text-to-speech (TTS) framework. Under the
-      assumptions that we only have a neutral speech database for a target
-      speaker, but we can utilize an expressive TTS model pre-trained by a
-      source speaker's emotional database, we adopt two adaptation strategies
-      to modify voice characteristics successfully while preserving emotional
-      expressiveness. One strategy is to modify voice characteristics for the
-      target speaker using a criterion of minimizing the spectral distance
-      between the target speaker's recorded and synthesized speech. The other
-      is to preserve expressiveness presentation capability using a criterion
-      of minimizing the distance between the input emotion embedding vector and
-      the embedding vector extracted from the target speaker’s synthesized
-      expressive speech. Since the two criteria are applied alternately in the
-      adaptation process, it is possible to avoid the kind of bias issues
-      frequently encountered in similar tasks. By tracking the accuracy of
-      speaker verification and emotion classification in each epoch of the
-      training phase, we verify that the proposed adaptation technique is very
-      effective compared to conventional approach. In subjective listening
-      tests to evaluate the expressiveness of synthesized speech, we confirm
-      that the proposed method achieves significantly higher scores than
-      conventional one.
+<body>
+  <article>
+    <header>
+      <h1>Audio samples from "Utilization of Contaminated Found Data for Speech Synthesis Using a Limited Personal Speech Database"</h1>
+    </header>
+  </article>
+
+  <div><b>Paper:</b> The paper will be uploaded.</div>
+  <div><b>Authors:</b> Hanbin Bae, Jae-Sung Bae, Young-Ik Kim, Hoon-Young Cho</div>
+
+  <p><b>Abstract:</b></div>
+    A personalized text-to-speech (TTS) system requires severalhours of high-quality personal speech data from a speaker. Inreal scenarios, collecting hours of voice recordings of a spe-cific  speaker  is  very  expensive,  and  only  a  few  minutes  ofdata are often available. Recently, has become easier to ob-tain speech data from personal social broadcasting. However,it  remains  difficult  to  utilize  them  as  training  data  for  TTSsystems,  as  they  include  various  noise  such  as  backgroundmusic. A global style token (GST) based TTS model can gen-erate high quality speech from speech data mixed with musicand noise, but it requires a sufficient amount of data to attainreliable performance. Therefore, in this paper, we propose amethod to train the GST-based TTS system with an insuffi-cient amount of specific speaker data containing different mu-sic noise. We apply two tasks: first, we separate music fromnoisy  speech  data  by  using  a  pre-trained  music  filter;  sec-ond, we use an auxiliary classifier to make the audio qualityclean. We demonstrate that the proposed method can synthe-size high-quality speech with less mispronunciation throughspeech recognition and listening tests.
+
+  <p><b>Proposed System Architecture:</b></div>
+    <img src="images/2020_ICASSP_fig_v5.png" alt="My Image"> <!-- width="100" height="200"-->
 
     &nbsp;
 
-    <p class="toc_title"><br><h2>Contents</h2></p>
+    <p class="toc_title"><br>
+      <h2>Contents</h2>
+    </p>
     <div id="toc_container">
-    <ul>
-      <li><a href="#src">Source Speaker's Expressive Speech</a></li>
+      <ul>
+        <li><a href="#src">Source Speaker's Expressive Speech</a></li>
         <ol>
           <li><a href="#src.rec">Recorded Speech</a></li>
           <li><a href="#src.synth">Synthesized Speech</a></li>
         </ol>
-      <li><a href="#tgt_emo_trans">Target Speaker's Expressive Speech based on Emotion Transplantation</a></li>
+        <li><a href="#tgt_emo_trans">Target Speaker's Expressive Speech based on Emotion Transplantation</a></li>
         <ol>
           <li><a href="#tgt_emo_trans.rec">Recorded Neutral Speech</a></li>
           <li><a href="#tgt_emo_trans.wo_emo_loss">Synthesized Expressive Speech (w/o emo_loss)</a></li>
           <li><a href="#tgt_emo_trans.w_emo_loss">Synthesized Expressive Speech (w/ emo_loss)</a></li>
         </ol>
-    </ul>
+      </ul>
     </div>
 
 
-    <div><br/>We selected speech samples from the test set, which are not used for expressive TTS model training.
-    The synthsized speech samples below are converted from mel-scale spectrogram to speech waveform by using the Griffin-Lim algorithm.
-    Please note that the sound quality of the synthesized speech is not a consideration.
+    <div><br />We selected speech samples from the test set, which are not used for expressive TTS model training.
+      The synthsized speech samples below are converted from mel-scale spectrogram to speech waveform by using the
+      Griffin-Lim algorithm.
+      Please note that the sound quality of the synthesized speech is not a consideration.
     </div>
 
 
     &nbsp;
 
     <div>
-      <a name="src"><h2>Source Speaker's Expressive Speech</h2></a>
+      <a name="src">
+        <h2>Source Speaker's Expressive Speech</h2>
+      </a>
       <div>
-        We used an internal expressive speech database for the source speaker consists of four emotion classes, namely neutral, joyful, angry, and sad. The total amount of speech waveforms is about 11 hours. It is recorded by a single professional voice actress.
+        We used an internal expressive speech database for the source speaker consists of four emotion classes, namely
+        neutral, joyful, angry, and sad. The total amount of speech waveforms is about 11 hours. It is recorded by a
+        single professional voice actress.
       </div>
 
-      <a name="src.rec"><h3>Recorded Speech</h3></a>
+      <a name="src.rec">
+        <h3>Recorded Speech</h3>
+      </a>
       <table>
         <tbody>
-        <tr>
-          <td align="center">NEU</td>
-          <td align="center">JOY</td>
-          <td align="center">ANG</td>
-          <td align="center">SAD</td>
-        </tr>
-        <tr>
-          <td><audio controls=""><source src="demo/record-src-emo/46-FY_NOR_NCF_00093.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo/record-src-emo/58-FY_JOY_NCF_00035.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo/record-src-emo/28-FY_ANG_NCF_00010.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo/record-src-emo/7-FY_SAD_NCF_00093.wav" type="audio/wav"></audio></td>
-        </tr>
+          <tr>
+            <td align="center">NEU</td>
+            <td align="center">JOY</td>
+            <td align="center">ANG</td>
+            <td align="center">SAD</td>
+          </tr>
+          <tr>
+            <td><audio controls="">
+                <source src="demo/record-src-emo/46-FY_NOR_NCF_00093.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="demo/record-src-emo/58-FY_JOY_NCF_00035.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="demo/record-src-emo/28-FY_ANG_NCF_00010.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="demo/record-src-emo/7-FY_SAD_NCF_00093.wav" type="audio/wav"></audio></td>
+          </tr>
         </tbody>
       </table>
 
 
-      <a name="src.synth"><h3>Synthesized Speech</h3></a>
+      <a name="src.synth">
+        <h3>Synthesized Speech</h3>
+      </a>
       <table>
         <tbody>
-        <tr>
-          <td align="center">NEU</td>
-          <td align="center">JOY</td>
-          <td align="center">ANG</td>
-          <td align="center">SAD</td>
-        </tr>
-        <tr>
-          <td><audio controls=""><source src="demo/synthesized-emo-src/src_emo-ref_FY_NOR_NCF_00051.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo/synthesized-emo-src/src_emo-ref_FY_JOY_NCF_00002.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo/synthesized-emo-src/src_emo-ref_FY_ANG_NCF_00006.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo/synthesized-emo-src/src_emo-ref_FY_SAD_NCF_00063.wav" type="audio/wav"></audio></td>
-        </tr>
+          <tr>
+            <td align="center">NEU</td>
+            <td align="center">JOY</td>
+            <td align="center">ANG</td>
+            <td align="center">SAD</td>
+          </tr>
+          <tr>
+            <td><audio controls="">
+                <source src="demo/synthesized-emo-src/src_emo-ref_FY_NOR_NCF_00051.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="demo/synthesized-emo-src/src_emo-ref_FY_JOY_NCF_00002.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="demo/synthesized-emo-src/src_emo-ref_FY_ANG_NCF_00006.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="demo/synthesized-emo-src/src_emo-ref_FY_SAD_NCF_00063.wav" type="audio/wav"></audio></td>
+          </tr>
         </tbody>
       </table>
     </div>
@@ -112,87 +115,130 @@
 
 
     <div><br><br><br>
-      <a name="src"><h2>Target Speaker's Expressive Speech based on Emotion Transplantation</h2></a>
+      <a name="src">
+        <h2>Target Speaker's Expressive Speech based on Emotion Transplantation</h2>
+      </a>
       <div>
         We adapt the pre-trained TTS model using a part of the neutral speech database; an hour of speech waveforms.
       </div>
 
-      <br><a name="tgt_emo_trans.rec"><h3>Recorded Neutral Speech</h3></a>
+      <br><a name="tgt_emo_trans.rec">
+        <h3>Recorded Neutral Speech</h3>
+      </a>
       <table>
         <tbody>
-        <tr>
-          <td align="center"></td>
-          <td align="center">NEU</td>
-        </tr>
-        <tr>
-          <td nowrap>sample 1</td>
-          <td><audio controls=""><source src="demo-tmp/record-tgt-neu/FEMALE00125.wav" type="audio/wav"></audio></td>
-        </tr>
-        <tr>
-          <td nowrap>sample 2</td>
-          <td><audio controls=""><source src="demo-tmp/record-tgt-neu/FEMALE00744.wav" type="audio/wav"></audio></td>
-        </tr>
+          <tr>
+            <td align="center"></td>
+            <td align="center">NEU</td>
+          </tr>
+          <tr>
+            <td nowrap>sample 1</td>
+            <td><audio controls="">
+                <source src="demo-tmp/record-tgt-neu/FEMALE00125.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td nowrap>sample 2</td>
+            <td><audio controls="">
+                <source src="demo-tmp/record-tgt-neu/FEMALE00744.wav" type="audio/wav"></audio></td>
+          </tr>
         </tbody>
       </table>
 
 
-      <br><a name="tgt_emo_trans.wo_emo_loss"><h3>Synthesized Expressive Speech (w/o emo_loss) - Conventional approach</h3></a>
+      <br><a name="tgt_emo_trans.wo_emo_loss">
+        <h3>Synthesized Expressive Speech (w/o emo_loss) - Conventional approach</h3>
+      </a>
       <table>
         <tbody>
-        <tr>
-          <td align="center"></td>
-          <td align="center">NEU</td>
-          <td align="center">JOY</td>
-          <td align="center">ANG</td>
-          <td align="center">SAD</td>
-        </tr>
-        <tr>
-          <td nowrap>sample 1</td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-10-ref_FY_NOR_NCF_00047.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-15-ref_FY_JOY_NCF_00035.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-52-ref_FY_ANG_NCF_00010.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-23-ref_FY_SAD_NCF_00137.wav" type="audio/wav"></audio></td>
-        </tr>
-        <tr>
-          <td nowrap>sample 2</td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-26-ref_FY_NOR_NCF_00093.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-38-ref_FY_JOY_NCF_00042.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-56-ref_FY_ANG_NCF_00063.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-49-ref_FY_SAD_NCF_00093.wav" type="audio/wav"></audio></td>
-        </tr>
+          <tr>
+            <td align="center"></td>
+            <td align="center">NEU</td>
+            <td align="center">JOY</td>
+            <td align="center">ANG</td>
+            <td align="center">SAD</td>
+          </tr>
+          <tr>
+            <td nowrap>sample 1</td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-10-ref_FY_NOR_NCF_00047.wav" type="audio/wav">
+              </audio></td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-15-ref_FY_JOY_NCF_00035.wav" type="audio/wav">
+              </audio></td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-52-ref_FY_ANG_NCF_00010.wav" type="audio/wav">
+              </audio></td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-23-ref_FY_SAD_NCF_00137.wav" type="audio/wav">
+              </audio></td>
+          </tr>
+          <tr>
+            <td nowrap>sample 2</td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-26-ref_FY_NOR_NCF_00093.wav" type="audio/wav">
+              </audio></td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-38-ref_FY_JOY_NCF_00042.wav" type="audio/wav">
+              </audio></td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-56-ref_FY_ANG_NCF_00063.wav" type="audio/wav">
+              </audio></td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/wo_emoloss-49-ref_FY_SAD_NCF_00093.wav" type="audio/wav">
+              </audio></td>
+          </tr>
         </tbody>
       </table>
 
 
-      <br><a name="tgt_emo_trans.w_emo_loss"><h3>Synthesized Expressive Speech (w/ emo_loss) - Proposed approach</h3></a>
+      <br><a name="tgt_emo_trans.w_emo_loss">
+        <h3>Synthesized Expressive Speech (w/ emo_loss) - Proposed approach</h3>
+      </a>
       <table>
         <tbody>
-        <tr>
-          <td align="center"></td>
-          <td align="center">NEU</td>
-          <td align="center">JOY</td>
-          <td align="center">ANG</td>
-          <td align="center">SAD</td>
-        </tr>
-        <tr>
-          <td nowrap>sample 1</td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/w_emoloss-6-ref_FY_NOR_NCF_00093.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/w_emoloss-11-ref_FY_JOY_NCF_00042.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/w_emoloss-14-ref_FY_ANG_NCF_00010.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/w_emoloss-33-ref_FY_SAD_NCF_00137.wav" type="audio/wav"></audio></td>
-        </tr>
-        <tr>
-          <td nowrap>sample 2</td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/w_emoloss-44-ref_FY_NOR_NCF_00047.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/w_emoloss-36-ref_FY_JOY_NCF_00035.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/w_emoloss-37-ref_FY_ANG_NCF_00005.wav" type="audio/wav"></audio></td>
-          <td><audio controls=""><source src="demo-tmp/synthesized-emo-tgt/w_emoloss-51-ref_FY_SAD_NCF_00093.wav" type="audio/wav"></audio></td>
-        </tr>
+          <tr>
+            <td align="center"></td>
+            <td align="center">NEU</td>
+            <td align="center">JOY</td>
+            <td align="center">ANG</td>
+            <td align="center">SAD</td>
+          </tr>
+          <tr>
+            <td nowrap>sample 1</td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-6-ref_FY_NOR_NCF_00093.wav" type="audio/wav">
+              </audio></td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-11-ref_FY_JOY_NCF_00042.wav" type="audio/wav">
+              </audio></td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-14-ref_FY_ANG_NCF_00010.wav" type="audio/wav">
+              </audio></td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-33-ref_FY_SAD_NCF_00137.wav" type="audio/wav">
+              </audio></td>
+          </tr>
+          <tr>
+            <td nowrap>sample 2</td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-44-ref_FY_NOR_NCF_00047.wav" type="audio/wav">
+              </audio></td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-36-ref_FY_JOY_NCF_00035.wav" type="audio/wav">
+              </audio></td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-37-ref_FY_ANG_NCF_00005.wav" type="audio/wav">
+              </audio></td>
+            <td><audio controls="">
+                <source src="demo-tmp/synthesized-emo-tgt/w_emoloss-51-ref_FY_SAD_NCF_00093.wav" type="audio/wav">
+              </audio></td>
+          </tr>
         </tbody>
       </table>
 
     </div>
 
 
-  </body>
+</body>
+
 </html>
