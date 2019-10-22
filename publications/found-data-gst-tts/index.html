@@ -2,13 +2,13 @@
 
 <head>
   <meta charset="UTF-8">
-  <title>Audio samples from "Utilization of Contaminated Found Data for Speech Synthesis Using a Limited Personal Speech Database"</title>
+  <title>Audio samples from "UTILIZATION OF MUSIC-MIXED BROADCASTING DATA FOR SPEECH SYNTHESIS USING A LIMITED PERSONAL SPEECH DATABASE"</title>
 </head>
 
 <body>
   <article>
     <header>
-      <h1>Audio samples from "Utilization of Contaminated Found Data for Speech Synthesis Using a Limited Personal Speech Database"</h1>
+      <h1>Audio samples from "UTILIZATION OF MUSIC-MIXED BROADCASTING DATA FOR SPEECH SYNTHESIS USING A LIMITED PERSONAL SPEECH DATABASE"</h1>
     </header>
   </article>
 
@@ -31,7 +31,8 @@
         <li><a href="#src">Pre-trained Music Filter</a></li>
         <ol type="1">
           <li><a href="#src.kspon">KSponSpeech Dataset</a></li>
-          <li><a href="#src.found">Found Data Application</a></li>
+          <li><a href="#src.kspon">Comparing music-mixed speech and filtered speech</a></li>
+          <li><a href="#src.found">Broadcasting Data Application</a></li>
         </ol>
         <li><a href="#gst-tts">Proposed Systems</a></li>
         <ol type="1">
@@ -43,8 +44,9 @@
 
 
     <div><br />We selected speech samples from the test set, which are not used for expressive TTS model training.
-      The synthsized speech samples below are converted from mel-scale spectrogram to speech waveform by using the
-      Griffin-Lim algorithm.
+
+      <!-- The synthsized speech samples below are converted from mel-scale spectrogram to speech waveform by using the -->
+      <!-- Griffin-Lim algorithm. -->
     </div>
 
 
@@ -55,42 +57,168 @@
         <h2>A. Pre-trained Music Filter</h2>
       </a>
       <div>
-        BLABLA
       </div>
 
 
       <a name="src.kspon">
         <h3>A.1. KSponSpeech Dataset</h3>
       </a>
-      BLABLA
-      <!--
+
+      To train a speaker-independent music filter, we use the KsponSpeech dataset.
+      dataset, which comprises approximatly 1,000 h of spontaneous speech samples recorded by 2,000 people talking about various topics, sampled at 16 kHz.
+      <br>
+      1. Male
+      <br>
+      <audio controls>
+        <source src="Kspon_sample/kspon_male.wav" type="audio/wav">
+      </audio>
+      <br>
+      2. Female
+      <br>
+
+      <audio controls>
+        <source src="Kspon_sample/kspon_female.wav" type="audio/wav">
+      </audio>
+      <br>
+
+
+      <a name="src.filter">
+        <h3>A.2. Comparing music-mixed speech and filtered speech</h3>
+
+      </a>
+
+      <br>
+
+      1. 가고시마에서는 연습경기를 통해 실전 감각을 끌어올린다는 계획이다.
+
       <table>
         <tbody>
           <tr>
-            <td align="center">NEU</td>
-            <td align="center">JOY</td>
-            <td align="center">ANG</td>
-            <td align="center">SAD</td>
+            <td nowrap></td>
+            <td align="center">0dB</td>
+            <td align="center">5dB</td>
+            <td align="center">10dB</td>
+            <td align="center">15dB</td>
+            <td align="center">20dB</td>
           </tr>
           <tr>
+            <td nowrap>Mixed</td>
             <td><audio controls="">
-                <source src="demo/record-src-emo/46-FY_NOR_NCF_00093.wav" type="audio/wav"></audio></td>
+                <source src="generalset/mixed/general_set1_p01_u001_0dB.wav" type="audio/wav"></audio></td>
             <td><audio controls="">
-                <source src="demo/record-src-emo/58-FY_JOY_NCF_00035.wav" type="audio/wav"></audio></td>
+                <source src="generalset/mixed/general_set1_p01_u001_5dB.wav" type="audio/wav"></audio></td>
             <td><audio controls="">
-                <source src="demo/record-src-emo/28-FY_ANG_NCF_00010.wav" type="audio/wav"></audio></td>
+                <source src="generalset/mixed/general_set1_p01_u001_10dB.wav" type="audio/wav"></audio></td>
             <td><audio controls="">
-                <source src="demo/record-src-emo/7-FY_SAD_NCF_00093.wav" type="audio/wav"></audio></td>
+                <source src="generalset/mixed/general_set1_p01_u001_15dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/mixed/general_set1_p01_u001_20dB.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td nowrap>Filtered</td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p01_u001_0dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p01_u001_5dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p01_u001_10dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p01_u001_15dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p01_u001_20dB.wav" type="audio/wav"></audio></td>
           </tr>
         </tbody>
       </table>
-      -->
 
+      <br>
+      2. 리니지 쿠우 서버 어떻게 하나요?
+
+      <table>
+        <tbody>
+          <tr>
+            <td nowrap></td>
+            <td align="center">0dB</td>
+            <td align="center">5dB</td>
+            <td align="center">10dB</td>
+            <td align="center">15dB</td>
+            <td align="center">20dB</td>
+          </tr>
+          <tr>
+            <td nowrap>Mixed</td>
+            <td><audio controls="">
+                <source src="generalset/mixed/general_set1_p04_u005_0dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/mixed/general_set1_p04_u005_5dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/mixed/general_set1_p04_u005_10dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/mixed/general_set1_p04_u005_15dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/mixed/general_set1_p04_u005_20dB.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td nowrap>Filtered</td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p04_u005_0dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p04_u005_5dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p04_u005_10dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p04_u005_15dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p04_u005_20dB.wav" type="audio/wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+
+      <br>
+      3. 직장인 소액대출 알아봅니다.
+
+      <table>
+        <tbody>
+          <tr>
+            <td nowrap></td>
+            <td align="center">0dB</td>
+            <td align="center">5dB</td>
+            <td align="center">10dB</td>
+            <td align="center">15dB</td>
+            <td align="center">20dB</td>
+          </tr>
+          <tr>
+            <td nowrap>Mixed</td>
+            <td><audio controls="">
+                <source src="generalset/mixed/general_set1_p10_u014_0dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/mixed/general_set1_p10_u014_5dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/mixed/general_set1_p10_u014_10dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/mixed/general_set1_p10_u014_15dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/mixed/general_set1_p10_u014_20dB.wav" type="audio/wav"></audio></td>
+          </tr>
+          <tr>
+            <td nowrap>Filtered</td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p10_u014_0dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p10_u014_5dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p10_u014_10dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p10_u014_15dB.wav" type="audio/wav"></audio></td>
+            <td><audio controls="">
+                <source src="generalset/filtered/general_set1_p10_u014_20dB.wav" type="audio/wav"></audio></td>
+          </tr>
+        </tbody>
+      </table>
+
+<!-- 
       <a name="src.found">
-        <h3>A.2. Found Data Application</h3>
+        <h3>A.3. Found Data Application</h3>
       </a>
-      <video id="myVideo" src="images/kma_jtbc_news_20190814_demo.mp4" controls width="640" height="360"></video> <br>
-      BLABLA
+      <video id="myVideo" src="images/kma_jtbc_news_20190814_demo.mp4" controls width="640" height="360"></video> <br> -->
     </div>
 
 
@@ -100,7 +228,6 @@
         <h2>B. Proposed Systems</h2>
       </a>
       <div>
-        BLABLA
       </div>
       <div><br>
         <b>1. TTS:</b> the DC-TTS [2] model usedconducted in the pre-liminary experiments.
@@ -123,7 +250,6 @@
         <h3>B.1. Models with SER higher than 60%</h3>
       </a>
       <div>
-        BLABLA
       </div>
       <!--
       <table>
@@ -176,7 +302,7 @@
             <audio controls>
                 <source src="demo/T2M_2.wav" type="audio/wav">
             </audio>
-            </td> 
+            </td>
             <td>
             <audio controls>
                 <source src="demo/GST_mixed_c5m5_2.wav" type="audio/wav">
@@ -203,7 +329,7 @@
             </td>
           </tr>
 
-          
+
 
           <tr>
             <td nowrap>Sample 2</td>
@@ -211,7 +337,7 @@
             <audio controls>
                 <source src="demo/T2M_4.wav" type="audio/wav">
             </audio>
-            </td> 
+            </td>
             <td>
             <audio controls>
                 <source src="demo/GST_mixed_c5m5_4.wav" type="audio/wav">
@@ -246,7 +372,7 @@
             <audio controls>
                 <source src="demo/T2M_6.wav" type="audio/wav">
             </audio>
-            </td> 
+            </td>
             <td>
             <audio controls>
                 <source src="demo/GST_mixed_c5m5_6.wav" type="audio/wav">
