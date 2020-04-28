@@ -5,3 +5,4 @@
 _site
 Gemfile.lock
 .publications.broadcasting-tts__1
+.ljspeech_lab
