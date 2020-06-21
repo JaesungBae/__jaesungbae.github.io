@@ -1,8 +1,0 @@
-*.DS_Store
-*.gem
-.bundle
-.sass-cache
-_site
-Gemfile.lock
-.publications.broadcasting-tts__1
-.ljspeech_lab
