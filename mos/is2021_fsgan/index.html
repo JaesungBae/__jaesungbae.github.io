@@ -1,0 +1,312 @@
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>MOS TEST</title> 
+  <!-- <style>
+    table {
+      width: 100%;
+      border: 1px solid #444444;
+      border-collapse: collapse;
+    }
+    th, td{
+      border: 1px solid #444444;
+    }
+  </style> -->
+</head>
+
+<body>
+  <article>
+    <header>
+      <h1>MOS TEST</h1>
+    </header>
+  </article>
+    <audio controls=""><source src="demo1/dctts_bb_f_68.wav" type="audio/wav"></audio>
+    <div>
+    <table>
+      <tbody>
+        <tr><td colspan="2" ></td>설문 조사 링크: <a href="https://docs.google.com/forms/d/e/1FAIpQLSeHSJykyqOlLsa0esh_TUfAX1UT34J09IzbpJ64Jgl5xzPYoA/viewform?usp=sf_link">https://docs.google.com/forms/d/e/1FAIpQLSeHSJykyqOlLsa0esh_TUfAX1UT34J09IzbpJ64Jgl5xzPYoA/viewform?usp=sf_link</a></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td colspan="2" > MOS (청취평가)에 귀한 시간 내시어 참여해 주셔서 대단히 감사드립니다.</td></tr>
+        <tr><td colspan="2" > - 본 평가는 합성음의 <b>발음 명료도 (정확도) 및 자연스러움 평가</b>를 위한 MOS 테스트 입니다.</td></tr>
+        <tr><td colspan="2" > - 각 점수 별로 참조에 사용된 샘플을 참고하여 주세요.</td></tr>
+        <tr><td colspan="2" > - 음성을 <b>끝까지 듣고(!)</b> 평가해주시면 감사하겠습니다! 음성의 끝부분에 발음 명료도가 떨어지는 샘플들이 있을 수 있습니다.</td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td colspan="2">
+      </tbody>
+    </table>
+
+    <table border="1px solid #444444" border-collapse="collapse;">
+        <tbody>
+            <tr><td align="center">점수</td><td align="center">정도</td><td align="center">내용</td><td align="center">참조</td><td align="center">비고</td></tr>
+            <tr><td>5</td><td align="center">매우 좋음</td><td>음성이 매우 자연스러우며, 억양이 살아있다. 발음 명료도가 매우 높다. (내용이 정확하게 전달된다.)<br>*부정확한 발음이 없음</td><td><audio src="eg/5_0917_full_base_model_1.0.10_NC_Base_NcFemale_1.0_None_None_038.wav" type="audio/wav" controls></audio></td><td></td></tr>
+            <tr><td>4</td><td align="center">좋음</td><td>음성이 대체적으로 자연스러우며, 억양이 대체적으로 살아있다. 발음 명료도가 높다. (한두 개 글자를 제외하고 내용이 정확하게 전달된다.)<br>*대체적으로 발음이 정확하지만, 한두 글자 정도 모호한 발음이 있음</td><td><audio src="eg/4_0929_win_and_qkv_1.4.2_NC_Base_NcFemale_1.0_None_None_101.wav" type="audio/wav" controls></audio></td><td>'고치시면 돼요' → '고취시면돼요' 와 같이 발음됨.</td></tr>
+            <tr><td>3</td><td align="center">보통</td><td>음성에 어색한 부분이 존재하며, 억양이 단조롭다. 발음이 대체로 명료하나, 일부분 발음 명료도가 떨어진다.<br>*대체적으로 발음이 정확하지만,한 두 단어 정도 발음이 부정확함</td><td><audio src="eg/3_0917_full_base_model_1.0.10_NC_Base_NcFemale_1.0_None_None_058.wav" type="audio/wav" controls></audio></td><td>중반부의 발화가 불분명함.</td></tr>
+            <tr><td>2</td><td align="center">안좋음</td><td>음성이 전체적으로 어색하며, 발음 명료도가 떨어진다. 무슨 말인지 알아 듣기 힘들다.<br>*한 두 단어 정도만 알아들을 수 있음</td><td><audio src="eg/2_0917_full_base_model_1.0.10_NC_Base_NcFemale_1.0_None_None_034.wav" type="audio/wav" controls></audio></td><td></td></tr>
+            <tr><td>1</td><td align="center">매우 안좋음</td><td>말을 전혀 못 알아듣겠다.</td><td> - </td><td></td></tr>
+        </tbody>
+    </table>
+
+    &nbsp;
+
+
+    <table>
+      <tbody>
+        <tr><td colspan="2" align="center" > ----------------------------------------------------- Test Samples 1~21 -----------------------------------------------------</td></tr>
+        <tr><td colspan="2" align="center"> ※ 주의 사항 : 각 샘플을 듣고 상대적인 평가가 아닌 절대적인 평가를 해주시기 바랍니다.</td></tr>
+        <tr><td colspan="2" > 5.0: Excellent 음성이 매우 자연스러우며, 내용이 정확하게 전달된다.</td></tr>
+        <tr><td colspan="2" > 4.0: Good 음성이 대체로 자연스러우며, 한두 개 글자를 제외하고 내용이 정확하게 전달된다</td></tr>
+        <tr><td colspan="2" > 3.0: Fair 음성에 어색한 부분이 존재한며, 억양이 단조롭다. 대체로 발음이 정확하지만, 한두 단어 정도 발음이 부정확하다.</td></tr>
+        <tr><td colspan="2" > 2.0: Poor 음성이 전체적으로 어색하며, 한두 단어 정도만 알아들을 수 있다. 무슨 말인지 알아듣기 힘들다.</td></tr>
+        <tr><td colspan="2" > 1.0: Bad 말을 전혀 못 알아듣겠다.</td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>1</td><td align="center"><audio src="demo1/001.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>2</td><td align="center"><audio src="demo1/002.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>3</td><td align="center"><audio src="demo1/003.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>4</td><td align="center"><audio src="demo1/004.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>5</td><td align="center"><audio src="demo1/005.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>6</td><td align="center"><audio src="demo1/006.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>7</td><td align="center"><audio src="demo1/007.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>8</td><td align="center"><audio src="demo1/008.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>9</td><td align="center"><audio src="demo1/009.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>10</td><td align="center"><audio src="demo1/010.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>11</td><td align="center"><audio src="demo1/011.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>12</td><td align="center"><audio src="demo1/012.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>13</td><td align="center"><audio src="demo1/013.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>14</td><td align="center"><audio src="demo1/014.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>15</td><td align="center"><audio src="demo1/015.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>16</td><td align="center"><audio src="demo1/016.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>17</td><td align="center"><audio src="demo1/017.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>18</td><td align="center"><audio src="demo1/018.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>19</td><td align="center"><audio src="demo1/019.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>20</td><td align="center"><audio src="demo1/020.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>21</td><td align="center"><audio src="demo1/021.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        </tbody>
+    </table>
+    </div>
+    <table>
+      <tbody>
+        <tr><td colspan="2" align="center" > ----------------------------------------------------- Test Samples 22~42 -----------------------------------------------------</td></tr>
+        <tr><td colspan="2" align="center"> ※ 주의 사항 : 각 샘플을 듣고 상대적인 평가가 아닌 절대적인 평가를 해주시기 바랍니다.</td></tr>
+        <tr><td colspan="2" > 5.0: Excellent 음성이 매우 자연스러우며, 내용이 정확하게 전달된다.</td></tr>
+        <tr><td colspan="2" > 4.0: Good 음성이 대체로 자연스러우며, 한두 개 글자를 제외하고 내용이 정확하게 전달된다</td></tr>
+        <tr><td colspan="2" > 3.0: Fair 음성에 어색한 부분이 존재한며, 억양이 단조롭다. 대체로 발음이 정확하지만, 한두 단어 정도 발음이 부정확하다.</td></tr>
+        <tr><td colspan="2" > 2.0: Poor 음성이 전체적으로 어색하며, 한두 단어 정도만 알아들을 수 있다. 무슨 말인지 알아듣기 힘들다.</td></tr>
+        <tr><td colspan="2" > 1.0: Bad 말을 전혀 못 알아듣겠다.</td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>22</td><td align="center"><audio src="demo1/022.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>23</td><td align="center"><audio src="demo1/023.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>24</td><td align="center"><audio src="demo1/024.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>25</td><td align="center"><audio src="demo1/025.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>26</td><td align="center"><audio src="demo1/026.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>27</td><td align="center"><audio src="demo1/027.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>28</td><td align="center"><audio src="demo1/028.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>29</td><td align="center"><audio src="demo1/029.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>30</td><td align="center"><audio src="demo1/030.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>31</td><td align="center"><audio src="demo1/031.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>32</td><td align="center"><audio src="demo1/032.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>33</td><td align="center"><audio src="demo1/033.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>34</td><td align="center"><audio src="demo1/034.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>35</td><td align="center"><audio src="demo1/035.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>36</td><td align="center"><audio src="demo1/036.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>37</td><td align="center"><audio src="demo1/037.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>38</td><td align="center"><audio src="demo1/038.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>39</td><td align="center"><audio src="demo1/039.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>40</td><td align="center"><audio src="demo1/040.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>41</td><td align="center"><audio src="demo1/041.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>42</td><td align="center"><audio src="demo1/042.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        </tbody>
+    </table>
+    </div>
+    <table>
+      <tbody>
+        <tr><td colspan="2" align="center" > ----------------------------------------------------- Test Samples 43~63 -----------------------------------------------------</td></tr>
+        <tr><td colspan="2" align="center"> ※ 주의 사항 : 각 샘플을 듣고 상대적인 평가가 아닌 절대적인 평가를 해주시기 바랍니다.</td></tr>
+        <tr><td colspan="2" > 5.0: Excellent 음성이 매우 자연스러우며, 내용이 정확하게 전달된다.</td></tr>
+        <tr><td colspan="2" > 4.0: Good 음성이 대체로 자연스러우며, 한두 개 글자를 제외하고 내용이 정확하게 전달된다</td></tr>
+        <tr><td colspan="2" > 3.0: Fair 음성에 어색한 부분이 존재한며, 억양이 단조롭다. 대체로 발음이 정확하지만, 한두 단어 정도 발음이 부정확하다.</td></tr>
+        <tr><td colspan="2" > 2.0: Poor 음성이 전체적으로 어색하며, 한두 단어 정도만 알아들을 수 있다. 무슨 말인지 알아듣기 힘들다.</td></tr>
+        <tr><td colspan="2" > 1.0: Bad 말을 전혀 못 알아듣겠다.</td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>43</td><td align="center"><audio src="demo1/043.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>44</td><td align="center"><audio src="demo1/044.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>45</td><td align="center"><audio src="demo1/045.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>46</td><td align="center"><audio src="demo1/046.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>47</td><td align="center"><audio src="demo1/047.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>48</td><td align="center"><audio src="demo1/048.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>49</td><td align="center"><audio src="demo1/049.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>50</td><td align="center"><audio src="demo1/050.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>51</td><td align="center"><audio src="demo1/051.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>52</td><td align="center"><audio src="demo1/052.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>53</td><td align="center"><audio src="demo1/053.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>54</td><td align="center"><audio src="demo1/054.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>55</td><td align="center"><audio src="demo1/055.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>56</td><td align="center"><audio src="demo1/056.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>57</td><td align="center"><audio src="demo1/057.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>58</td><td align="center"><audio src="demo1/058.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>59</td><td align="center"><audio src="demo1/059.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>60</td><td align="center"><audio src="demo1/060.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>61</td><td align="center"><audio src="demo1/061.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>62</td><td align="center"><audio src="demo1/062.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>63</td><td align="center"><audio src="demo1/063.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        </tbody>
+    </table>
+    </div>
+    <table>
+      <tbody>
+        <tr><td colspan="2" align="center" >----------------------------------------------------- Test Samples 64~84 -----------------------------------------------------</td></tr>
+        <tr><td colspan="2" align="center"> ※ 주의 사항 : 각 샘플을 듣고 상대적인 평가가 아닌 절대적인 평가를 해주시기 바랍니다.</td></tr>
+        <tr><td colspan="2" > 5.0: Excellent 음성이 매우 자연스러우며, 내용이 정확하게 전달된다.</td></tr>
+        <tr><td colspan="2" > 4.0: Good 음성이 대체로 자연스러우며, 한두 개 글자를 제외하고 내용이 정확하게 전달된다</td></tr>
+        <tr><td colspan="2" > 3.0: Fair 음성에 어색한 부분이 존재한며, 억양이 단조롭다. 대체로 발음이 정확하지만, 한두 단어 정도 발음이 부정확하다.</td></tr>
+        <tr><td colspan="2" > 2.0: Poor 음성이 전체적으로 어색하며, 한두 단어 정도만 알아들을 수 있다. 무슨 말인지 알아듣기 힘들다.</td></tr>
+        <tr><td colspan="2" > 1.0: Bad 말을 전혀 못 알아듣겠다.</td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>64</td><td align="center"><audio src="demo1/064.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>65</td><td align="center"><audio src="demo1/065.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>66</td><td align="center"><audio src="demo1/066.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>67</td><td align="center"><audio src="demo1/067.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>68</td><td align="center"><audio src="demo1/068.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>69</td><td align="center"><audio src="demo1/069.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>70</td><td align="center"><audio src="demo1/070.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>71</td><td align="center"><audio src="demo1/071.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>72</td><td align="center"><audio src="demo1/072.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>73</td><td align="center"><audio src="demo1/073.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>74</td><td align="center"><audio src="demo1/074.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>75</td><td align="center"><audio src="demo1/075.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>76</td><td align="center"><audio src="demo1/076.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>77</td><td align="center"><audio src="demo1/077.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>78</td><td align="center"><audio src="demo1/078.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>79</td><td align="center"><audio src="demo1/079.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>80</td><td align="center"><audio src="demo1/080.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>81</td><td align="center"><audio src="demo1/081.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>82</td><td align="center"><audio src="demo1/082.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>83</td><td align="center"><audio src="demo1/083.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>84</td><td align="center"><audio src="demo1/084.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+      </tbody>
+    </table>
+    </div>
+    <table>
+      <tbody>
+        <tr><td colspan="2" align="center" >----------------------------------------------------- Test Samples 85~105 -----------------------------------------------------</td></tr>
+        <tr><td colspan="2" align="center"> ※ 주의 사항 : 각 샘플을 듣고 상대적인 평가가 아닌 절대적인 평가를 해주시기 바랍니다.</td></tr>
+        <tr><td colspan="2" > 5.0: Excellent 음성이 매우 자연스러우며, 내용이 정확하게 전달된다.</td></tr>
+        <tr><td colspan="2" > 4.0: Good 음성이 대체로 자연스러우며, 한두 개 글자를 제외하고 내용이 정확하게 전달된다</td></tr>
+        <tr><td colspan="2" > 3.0: Fair 음성에 어색한 부분이 존재한며, 억양이 단조롭다. 대체로 발음이 정확하지만, 한두 단어 정도 발음이 부정확하다.</td></tr>
+        <tr><td colspan="2" > 2.0: Poor 음성이 전체적으로 어색하며, 한두 단어 정도만 알아들을 수 있다. 무슨 말인지 알아듣기 힘들다.</td></tr>
+        <tr><td colspan="2" > 1.0: Bad 말을 전혀 못 알아듣겠다.</td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>85</td><td align="center"><audio src="demo1/085.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>86</td><td align="center"><audio src="demo1/086.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>87</td><td align="center"><audio src="demo1/087.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>88</td><td align="center"><audio src="demo1/088.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>89</td><td align="center"><audio src="demo1/089.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>90</td><td align="center"><audio src="demo1/090.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>91</td><td align="center"><audio src="demo1/091.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>92</td><td align="center"><audio src="demo1/092.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>93</td><td align="center"><audio src="demo1/093.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>94</td><td align="center"><audio src="demo1/094.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>95</td><td align="center"><audio src="demo1/095.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>96</td><td align="center"><audio src="demo1/096.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>97</td><td align="center"><audio src="demo1/097.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>98</td><td align="center"><audio src="demo1/098.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>99</td><td align="center"><audio src="demo1/099.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>100</td><td align="center"><audio src="demo1/100.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>101</td><td align="center"><audio src="demo1/101.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>102</td><td align="center"><audio src="demo1/102.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>103</td><td align="center"><audio src="demo1/103.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>104</td><td align="center"><audio src="demo1/104.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>105</td><td align="center"><audio src="demo1/105.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+      </tbody>
+    </table>
+    </div>
+    <table>
+      <tbody>
+        <tr><td colspan="2" align="center" >----------------------------------------------------- Test Samples 106~126 -----------------------------------------------------</td></tr>
+        <tr><td colspan="2" align="center"> ※ 주의 사항 : 각 샘플을 듣고 상대적인 평가가 아닌 절대적인 평가를 해주시기 바랍니다.</td></tr>
+        <tr><td colspan="2" > 5.0: Excellent 음성이 매우 자연스러우며, 내용이 정확하게 전달된다.</td></tr>
+        <tr><td colspan="2" > 4.0: Good 음성이 대체로 자연스러우며, 한두 개 글자를 제외하고 내용이 정확하게 전달된다</td></tr>
+        <tr><td colspan="2" > 3.0: Fair 음성에 어색한 부분이 존재한며, 억양이 단조롭다. 대체로 발음이 정확하지만, 한두 단어 정도 발음이 부정확하다.</td></tr>
+        <tr><td colspan="2" > 2.0: Poor 음성이 전체적으로 어색하며, 한두 단어 정도만 알아들을 수 있다. 무슨 말인지 알아듣기 힘들다.</td></tr>
+        <tr><td colspan="2" > 1.0: Bad 말을 전혀 못 알아듣겠다.</td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>106</td><td align="center"><audio src="demo1/106.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>107</td><td align="center"><audio src="demo1/107.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>108</td><td align="center"><audio src="demo1/108.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>109</td><td align="center"><audio src="demo1/109.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>110</td><td align="center"><audio src="demo1/110.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>111</td><td align="center"><audio src="demo1/111.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>112</td><td align="center"><audio src="demo1/112.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>113</td><td align="center"><audio src="demo1/113.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>114</td><td align="center"><audio src="demo1/114.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>115</td><td align="center"><audio src="demo1/115.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>116</td><td align="center"><audio src="demo1/116.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>117</td><td align="center"><audio src="demo1/117.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>118</td><td align="center"><audio src="demo1/118.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>119</td><td align="center"><audio src="demo1/119.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>120</td><td align="center"><audio src="demo1/120.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>121</td><td align="center"><audio src="demo1/121.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>122</td><td align="center"><audio src="demo1/122.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>123</td><td align="center"><audio src="demo1/123.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>124</td><td align="center"><audio src="demo1/124.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>125</td><td align="center"><audio src="demo1/125.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>126</td><td align="center"><audio src="demo1/126.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+      </tbody>
+    </table>
+    </div>
+    <table>
+      <tbody>
+        <tr><td colspan="2" align="center" >----------------------------------------------------- Test Samples 127~140 -----------------------------------------------------</td></tr>
+        <tr><td colspan="2" align="center"> ※ 주의 사항 : 각 샘플을 듣고 상대적인 평가가 아닌 절대적인 평가를 해주시기 바랍니다.</td></tr>
+        <tr><td colspan="2" > 5.0: Excellent 음성이 매우 자연스러우며, 내용이 정확하게 전달된다.</td></tr>
+        <tr><td colspan="2" > 4.0: Good 음성이 대체로 자연스러우며, 한두 개 글자를 제외하고 내용이 정확하게 전달된다</td></tr>
+        <tr><td colspan="2" > 3.0: Fair 음성에 어색한 부분이 존재한며, 억양이 단조롭다. 대체로 발음이 정확하지만, 한두 단어 정도 발음이 부정확하다.</td></tr>
+        <tr><td colspan="2" > 2.0: Poor 음성이 전체적으로 어색하며, 한두 단어 정도만 알아들을 수 있다. 무슨 말인지 알아듣기 힘들다.</td></tr>
+        <tr><td colspan="2" > 1.0: Bad 말을 전혀 못 알아듣겠다.</td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>127</td><td align="center"><audio src="demo1/127.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>128</td><td align="center"><audio src="demo1/128.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>129</td><td align="center"><audio src="demo1/129.wav" type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>130</td><td align="center"><audio src="demo1/130.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>131</td><td align="center"><audio src="demo1/131.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>132</td><td align="center"><audio src="demo1/132.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>133</td><td align="center"><audio src="demo1/133.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+        <tr><td nowrap>134</td><td align="center"><audio src="demo1/134.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>135</td><td align="center"><audio src="demo1/135.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>136</td><td align="center"><audio src="demo1/136.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>137</td><td align="center"><audio src="demo1/137.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>138</td><td align="center"><audio src="demo1/138.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>139</td><td align="center"><audio src="demo1/139.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td nowrap>140</td><td align="center"><audio src="demo1/140.wav"  type="audio/wav" controls></audio></td></tr>
+        <tr><td colspan="2">  &nbsp; </td></tr>
+      </tbody>
+    </table>
+    </div>
+
+    &nbsp;
+
+
+
+</body>
+
+</html>
