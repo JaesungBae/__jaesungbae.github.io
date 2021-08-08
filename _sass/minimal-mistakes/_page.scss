@@ -108,8 +108,34 @@ body {
   p,
   li,
   dl {
-    font-size: 1em;
+    font-size: 0.8em;  // jsbae modified: was 1em;
   }
+  // jsbae setting
+  // ul li {
+  //   font-size: 0.8em;
+  // }
+
+  ol li ul li,
+  ol li ol li,
+  ul li ul li,
+  ul li ol li {
+    font-size: 0.95em;
+  }
+
+  ol li ul li ol li,
+  ol li ul li ul li,
+  ol li ol li ol li,
+  ol li ol li ul li,
+  ul li ul li ol li,
+  ul li ul li ul li,
+  ul li ol li ol li,
+  ul li ol li ul li{
+    font-size: 0.95em;
+  }
+
+  // ul li ul li ul li {
+  //   font-size: 0.6em;
+  // }
 
   /* paragraph indents */
   p {
@@ -147,7 +173,8 @@ body {
   }
 
   .small {
-    font-size: $type-size-6;
+    // font-size: $type-size-6;
+    font-size: 0.75em;
   }
 
   /* blockquote citations */
