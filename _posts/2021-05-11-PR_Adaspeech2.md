@@ -44,12 +44,12 @@ Arxiv: [https://arxiv.org/pdf/2104.09715.pdf](https://arxiv.org/pdf/2104.09715.p
     3. Inference
         * Fine-tuned mel decoder + phoneme encoder => synthesize custom voice for target speaker
     
-    * Two advantage
+    * Two advantages
         1. **Pluggable:** 핵심은 additional encoder를 이미 학습된 TTS에 추가하는 것! 그러므로 이미 존재하는 TTS에 손쉽게 적용 가능함
         2. **Effective:** It achieves on-par voice quality with the transcribed TTS adaptation, with the same amount of untranscribed data. 
 
 ## 2. Method
-![f2](/images/2021-05-11-PR_Adaspeech2/f2.PNG){: .center}
+![f2](/images/2021-05-11-PR_Adaspeech2/f2.PNG){: width="50%" height="50%" .center}
 
 * Two main modules:
     1. TTS Model pipeline: phoneme encoder + mel-decoder
@@ -64,7 +64,7 @@ Arxiv: [https://arxiv.org/pdf/2104.09715.pdf](https://arxiv.org/pdf/2104.09715.p
         * phoneme-encoder와 mel-decoder 이용해서 음성 생성
 
 ### 2.1. Source Model Training
-![f1](/images/2021-05-11-PR_Adaspeech2/f1.PNG){: .center}
+![f1](/images/2021-05-11-PR_Adaspeech2/f1.PNG){: width="50%" height="50%" .center}
 
 * AdaSpeech 구조 따름
     * specifically designed acoustic condition modeling + conditional layer normalization
@@ -128,7 +128,7 @@ pass
         * Previous TTS adaptation system using **paired text and speech (transcribed speech) data.**
         * We take its performance as another ***upper bound.***
 
-![t1](/images/2021-05-11-PR_Adaspeech2/t1.PNG){: .center}
+![t1](/images/2021-05-11-PR_Adaspeech2/t1.PNG){: width="50%" height="50%" .center}
 * Evaluation (MOS & SMOS)
     * Twenty native English speakers are asked to make quality judgments in terms of naturalness and similarity
 * 결과
@@ -138,8 +138,8 @@ pass
         * Internal spontaneous speech data에 대해서 실험 수행
         * 비슷한 성능 보임 (AdaSpeech가 0.012 CMOS socre 보임)
 
-### 3.3.  Analyses on Adaptation Strategy (2가지 실험)
-![t2](/images/2021-05-11-PR_Adaspeech2/t2.PNG){: .center}
+### <span style="color:red">3.3. Analyses on Adaptation Strategy (2가지 실험)</span>
+![t2](/images/2021-05-11-PR_Adaspeech2/t2.PNG){: width="50%" height="50%" .center}
 * 실험 1. W/o L2 loss constraint
     * L2 loss를 통해서 mel-encoder phoneme encoder 가깝게 하는 것의 효과를 관찰하기 위한 ablation study.
 * 실험 2. Fine-tune mel encoder & decoder
@@ -147,8 +147,8 @@ pass
     * Voice Qaulity 저하
     * (그러므로) encoder를 변하지 않도록 하는것이 adaptation performance에 긍정적인 영향을 미친다
 
-### 3.4.  Varying Adaptation Data 
-![f3](/images/2021-05-11-PR_Adaspeech2/f3.PNG){: .center}
+### 3.4. <span style="color:red">Varying Adaptation Data</span>
+![f3](/images/2021-05-11-PR_Adaspeech2/f3.PNG){: width="50%" height="50%" .center}
 
 * 샘플 개수에 따른 CMOS evaluation
 * 20개 이하일 때 sample 개수가 증가할수록 MOS 점수가 급격하게 증가하는 것을 관찰할 수 있음
@@ -157,7 +157,7 @@ pass
 ## 4. Conclusion and Comments
 * AdaSpeech2
     * pluggable & effective
-    * Untranscribed speech data로 adaptation 수행하는 TTS 모델
+    * **<span style="color:red">Untranscribed speech data로 adaptation 수행하는 TTS 모델</span>**
     * Upper bound system과 유사한 성능의 MOS와 SMOS 점수 획득
 * Future work 
     * We will explore different adaptation methods to improve voice quality and similarity and further extend our method to more challenging scenarios such as spontaneous speech.

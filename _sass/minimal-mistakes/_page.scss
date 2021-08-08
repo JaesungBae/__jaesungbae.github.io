@@ -36,6 +36,17 @@ body {
 }
 
 .page {
+  .highlight { 
+    font-style: normal; 
+    font-weight: bold;
+    color: red;
+  }
+
+  .center {
+    display: block;
+    margin: auto;
+  }
+
   @include breakpoint($large) {
     float: right;
     width: calc(100% - #{$right-sidebar-width-narrow});
@@ -46,7 +57,7 @@ body {
     width: calc(100% - #{$right-sidebar-width});
     padding-right: $right-sidebar-width;
   }
-
+  
   .page__inner-wrap {
     float: left;
     margin-top: 1em;
@@ -173,11 +184,9 @@ body {
   }
 
   .small {
-    // font-size: $type-size-6;
     font-size: 0.75em;
   }
 
-  /* blockquote citations */
   blockquote + .small {
     margin-top: -1.5em;
     padding-left: 1.25rem;
