@@ -147,8 +147,8 @@ pass
     * Voice Qaulity 저하
     * (그러므로) encoder를 변하지 않도록 하는것이 adaptation performance에 긍정적인 영향을 미친다
 
-### 3.4. <span style="color:red">Varying Adaptation Data</span>
-![f3](/images/2021-05-11-PR_Adaspeech2/f3.PNG){: width="50%" height="50%" .center}
+### <span style="color:red">3.4. Varying Adaptation Data</span>
+![f3](/images/2021-05-11-PR_Adaspeech2/f3.PNG){: width="30%" height="30%" .center}
 
 * 샘플 개수에 따른 CMOS evaluation
 * 20개 이하일 때 sample 개수가 증가할수록 MOS 점수가 급격하게 증가하는 것을 관찰할 수 있음
