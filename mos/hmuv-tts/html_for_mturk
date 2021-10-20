@@ -1,0 +1,102 @@
+<!-- You must include this JavaScript file -->
+<script src="https://assets.crowd.aws/crowd-html-elements.js"></script>
+
+<!-- For the full list of available Crowd HTML Elements and their input/output documentation,
+      please refer to https://docs.aws.amazon.com/sagemaker/latest/dg/sms-ui-template-reference.html -->
+
+<style>
+  table {
+    width: 100%;
+    border: 1px solid #444444;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid #444444;
+     padding: 1px;
+  }
+</style>
+
+<!-- You must include crowd-form so that your task successfully submit answers -->
+<crowd-form answer-format="flatten-objects">
+
+    <!-- The crowd-classifier element will create a tool for the Worker to select the
+          correct answer to your question -->
+    <crowd-classifier
+        categories="['5.0 - Excellent - Completely natural speech', '4.5', '4.0 - Good - Mostly natural speech', '3.5', '3.0 - Fair - Equally natural and unnatural speech', '2.5', '2.0 - Poor - Mostly unnatural speech', '1.5', '1.0 - Bad - Completely unnatural speech']"
+        header="How natural (i.e. human-sounding) is this recording?"
+        name="audio-naturalness">
+
+            <classification-target>
+                <audio controls="" style="width: 100%">
+
+                    <!-- Your audio file URLs will be substituted for the "audio_url" variable
+                          when you publish a batch with a CSV input file containing multiple
+                          audio file URLs -->
+                    <source src="${audio_url}" type="audio/wav" />
+
+                </audio>
+            </classification-target>
+
+        <!-- Use the short-instructions section for quick instructions that the Worker
+              will see while working on the task. Including some basic examples of
+              good and bad answers here can help get good results. You can include
+              any HTML here. -->
+        <short-instructions>
+            <p>
+              Listen to the each audio and assess the quality of the audio based on you opinion of how <b><i>natural</i></b> the audio sounded.
+            </p>
+            <p>
+                <b>IMPORTANT: </b>We highly recommend to hear audios with <b><i>headphones</i></b> in the environment with <b><i>no noise</i></b> in background.
+            </p>
+            <p>
+                Before you start the task, please <b><i>read the full instructions.</i></b>
+            </p>
+
+
+        </short-instructions>
+
+        <!-- Use the full-instructions section for more detailed instructions that the
+              Worker can open while working on the task. Including more detailed
+              instructions and additional examples of good and bad answers here can
+              help get good results. You can include any HTML here. -->
+        <full-instructions>
+            <h3>Instructdions:</h3>
+            <ul>
+                <li>In this task, after you hear to each audio, you will choose a score for the audio files you've heard</li>
+                <li>This scores should reflect your opinion of how <b><i>natural</i></b> the audio sounded.</li>
+                <li>Note taht you should not judge the grammar of content of the sentence, just how it <b><i>sounds.</i></b></li>
+                <li>It is an <b><i>absolute evaluation.</i></b></li>
+                <li><b>IMPORTANT: </b>We highly recommend to hear audios with <b><i>headphones</i></b> in the environment with <b><i>no noise</i></b> in background.</li>
+            </ul>
+            Please release task if:
+            <ul>
+                <li>You do not have headphones, or</li>
+                <li>There is background noise, or</li>
+                <li>You think you do not have good listening ability, or</li>
+                <li>For any reason, you can’t hear the audio samples.</li>
+            </ul>
+            <p>Listen to these examples to get an idea of how to rate:</p>
+            <div>
+            <table>
+                <tbody>
+                    <tr><td>Score</td><td>Naturalness</td><td>Description</td><td>Reference</td></tr>
+                    <tr><td>5.0</td><td>Excellent</td><td>Completely natural speech</td><td><audio controls="" style="width: 100%"><source src="https://jaesungbae.github.io/mos/hmuv-tts/demo1/ex_5.wav" type="audio/wav" /></audio></td></tr>
+                    <tr><td>4.0</td><td>Good</td><td>Mostly natural speech</td><td>-</td></tr>
+                    <tr><td>3.0</td><td>Fair</td><td>Equally natural and unnatural speech</td><td><audio controls="" style="width: 100%"><source src="https://jaesungbae.github.io/mos/hmuv-tts/demo1/ex_3.wav" type="audio/wav" /></audio></td></tr>
+                    <tr><td>2.0</td><td>Poor</td><td>Mostly unnatural speech</td><td>-</td></tr>
+                    <tr><td>1.0</td><td>Bad</td><td>Completely unnatural speech</td><td><audio controls="" style="width: 100%"><source src="https://jaesungbae.github.io/mos/hmuv-tts/demo1/ex_1.wav" type="audio/wav" /></audio></td></tr>
+                </tbody>
+            </table>
+            </div>
+            <!--<ul>-->
+            <!--<li>5.0 - Excellent - Completely natural speech - <audio controls="" style="width: 50%"><source src="https://jaesungbae.github.io/mos/hmuv-tts/demo1/ex_5.wav" type="audio/wav" /></audio></li>-->
+            <!--<p>4.0 - Good - Mostly natural speech - audio sample 2</p>-->
+            <!--<p>3.0 - Fair - Equally natural and unnatural speech - audio sample 3</p>-->
+            <!--<p>2.0 - Poor - Mostly unnatural speech - audio sample 4</p>-->
+            <!--<p>1.0 - Bad - Completely unnatural speech - audio sample 5</p>    -->
+            <!--</ul>-->
+
+        </full-instructions>
+
+    </crowd-classifier>
+</crowd-form>
