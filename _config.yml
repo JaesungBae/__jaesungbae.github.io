@@ -96,7 +96,7 @@ analytics:
 # Site Author
 author:
   name             : "Jae-Sung Bae"
-  avatar           : # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
+  avatar           : "/images/bio_photo_v1.jpg" # path of avatar image, e.g. "/assets/images/bio-photo.jpg"
   bio              : "Interested in Deep Learning, Speech & Generation. Working for Speech AI Lab, NCSOFT"
   location         : "Seoul, Republic of Korea"
   email            : "bjs2279@gmail.com"
